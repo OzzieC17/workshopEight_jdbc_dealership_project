@@ -1,31 +1,38 @@
 package com.ps.dealership;
 
 public class Vehicle {
-    private int vin;
+    private String vin;
     private int year;
     private String make;
     private String model;
     private String vehicleType;
     private String color;
-    private int odometer;
+    private int mileage;
     private double price;
+    private boolean sold;
 
-    public Vehicle(int vin, int year, String make, String model, String vehicleType, String color, int odometer, double price) {
+    public Vehicle(String vin, int year, String make, String model, String vehicleType, String color, int odometer, double price, boolean sold) {
         this.vin = vin;
         this.year = year;
         this.make = make;
         this.model = model;
         this.vehicleType = vehicleType;
         this.color = color;
-        this.odometer = odometer;
+        this.mileage = odometer;
         this.price = price;
+        this.sold = sold;
     }
 
-    public int getVin() {
+    public Vehicle() {
+        
+    }
+
+
+    public String getVin() {
         return vin;
     }
 
-    public void setVin(int vin) {
+    public void setVin(String vin) {
         this.vin = vin;
     }
 
@@ -69,12 +76,12 @@ public class Vehicle {
         this.color = color;
     }
 
-    public int getOdometer() {
-        return odometer;
+    public int getMileage() {
+        return mileage;
     }
 
-    public void setOdometer(int odometer) {
-        this.odometer = odometer;
+    public void setMileage(int mileage) {
+        this.mileage = mileage;
     }
 
     public double getPrice() {
@@ -85,17 +92,26 @@ public class Vehicle {
         this.price = price;
     }
 
+    public boolean isSold() {
+        return sold;
+    }
+
+    public void setSold(boolean sold) {
+        this.sold = sold;
+    }
+
     @Override
     public String toString() {
-        return String.format("%d|%d|%s|%s|%s|%s|%d|%.2f",
+        return String.format("%s|%d|%s|%s|%s|%s|%d|%.2f",
                 this.vin,
                 this.year,
                 this.make,
                 this.model,
                 this.vehicleType,
                 this.color,
-                this.odometer,
-                this.price
+                this.mileage,
+                this.price,
+                this.sold
         );
     }
 }

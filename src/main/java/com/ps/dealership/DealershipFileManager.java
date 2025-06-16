@@ -21,7 +21,7 @@ public class DealershipFileManager {
 
             while((input = bufferedReader.readLine()) != null){
                 String[] vehicleDetails = input.split("\\|");
-                int vin = Integer.parseInt(vehicleDetails[0]);
+                String vin = String.valueOf(Integer.parseInt(vehicleDetails[0]));
                 int year = Integer.parseInt(vehicleDetails[1]);
                 String make = vehicleDetails[2];
                 String model = vehicleDetails[3];
@@ -57,7 +57,7 @@ public class DealershipFileManager {
                         vehicle.getModel(),
                         vehicle.getVehicleType(),
                         vehicle.getColor(),
-                        vehicle.getOdometer(),
+                        vehicle.getMileage(),
                         vehicle.getPrice()
                 );
                 bufferedWriter.write(vehicleLine);

@@ -23,7 +23,7 @@ public class ContractFileManager {
                         .append(vehicle.getModel()).append("|")
                         .append(vehicle.getVehicleType()).append("|")
                         .append(vehicle.getColor()).append("|")
-                        .append(vehicle.getOdometer()).append("|")
+                        .append(vehicle.getMileage()).append("|")
                         .append(String.format("%.2f", vehicle.getPrice())).append("|");
 
 
@@ -48,7 +48,7 @@ public class ContractFileManager {
                         .append(vehicle.getModel()).append("|")
                         .append(vehicle.getVehicleType()).append("|")
                         .append(vehicle.getColor()).append("|")
-                        .append(vehicle.getOdometer()).append("|")
+                        .append(vehicle.getMileage()).append("|")
                         .append(String.format("%.2f", vehicle.getPrice())).append("|");
                 stringBuilder.append(String.format("%.2f", leaseContract.getExpectedEndingValue())).append("|")
                         .append(String.format("%.2f", leaseContract.getLeaseFee())).append("|")

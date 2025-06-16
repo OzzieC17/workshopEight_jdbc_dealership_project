@@ -189,7 +189,7 @@ public class UserInterface {
         double price = scanner.nextDouble();
         scanner.nextLine();
 
-        Vehicle newVehicle = new Vehicle(vin, year, make, model, type, color, odometer, price);
+        Vehicle newVehicle = new Vehicle(vin, year, make, model, type, color, odometer, price, sold);
         dealership.addVehicle(newVehicle);
         DealershipFileManager.saveDealership(dealership);
 

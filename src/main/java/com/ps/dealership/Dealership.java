@@ -1,6 +1,5 @@
 package com.ps.dealership;
 
-import java.sql.Array;
 import java.util.ArrayList;
 
 public class Dealership {
@@ -57,7 +56,7 @@ public class Dealership {
     public ArrayList<Vehicle> vehiclesByMileage(int min, int max) {
         ArrayList<Vehicle> result = new ArrayList<>();
         for (Vehicle vehicle : inventory) {
-            if (vehicle.getOdometer() >= min && vehicle.getOdometer() <= max) {
+            if (vehicle.getMileage() >= min && vehicle.getMileage() <= max) {
                 result.add(vehicle);
             }
         }
@@ -80,7 +79,7 @@ public class Dealership {
     }
     public boolean removeVehicle(int vin) {
         for (Vehicle vehicle : inventory) {
-            if (vehicle.getVin() == vin) {
+            if (vehicle.getVin().equals(vin)) {
                 inventory.remove(vehicle);
                 return true;
             }
